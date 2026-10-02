@@ -24,13 +24,11 @@ public class ArrayCollection<T> implements CollectionInterface<T>{
 		numElements++;
 	    return true;
 	}
-
 	@Override
 	public T get(T item) {
 	    int index = this.find(item);
 	    return elements[index];
 	}
-
 	@Override
 	public boolean contains(T item) {
         for(int i = 0; i < numElements; i++){
@@ -40,7 +38,6 @@ public class ArrayCollection<T> implements CollectionInterface<T>{
         }
         return false;
 	}
-
 	@Override
 	public boolean remove(T item) {
 	    int index = find(item);
@@ -52,7 +49,6 @@ public class ArrayCollection<T> implements CollectionInterface<T>{
         numElements--;
         return true;
 	}
-
 	@Override
 	public boolean isFull() {
 	    if(numElements >= 100){
@@ -60,7 +56,6 @@ public class ArrayCollection<T> implements CollectionInterface<T>{
 		}
 		return false;
 	}
-
 	@Override
 	public boolean isEmpty() {
 	    if(numElements <= 0){
@@ -68,10 +63,8 @@ public class ArrayCollection<T> implements CollectionInterface<T>{
 		}
 		return false;
 	}
-
 	@Override
 	public int size() {
 		return numElements;
 	}
-
 }
